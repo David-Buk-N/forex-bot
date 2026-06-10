@@ -1,0 +1,10 @@
+# Real credentials — never commit. Use config.example.yaml as the template.
+config.yaml
+
+# Python
+__pycache__/
+*.pyc
+
+# Exported market data (regenerate via tools/export_data.py)
+data/*.csv
+!data/sample_*.csv

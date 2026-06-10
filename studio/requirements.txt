@@ -1,0 +1,10 @@
+# Core deps. Indicators are implemented in pure pandas, so no `ta`/`pandas_ta`
+# is required (and pandas_ta is currently broken on Python 3.13 anyway).
+pandas>=2.0
+numpy>=1.24
+PyYAML>=6.0
+requests>=2.28
+
+# Live trading only (Windows + MetaTrader 5 terminal installed).
+# The strategy and backtester run fine without this.
+MetaTrader5>=5.0 ; platform_system == "Windows"

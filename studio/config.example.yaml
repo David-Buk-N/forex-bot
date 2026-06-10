@@ -1,0 +1,39 @@
+# Example configuration. Copy this to `config.yaml` and fill in real values.
+# `config.yaml` is gitignored so your credentials never get committed.
+
+mt5:
+  login: 12345678            # Your MT5 account number (demo first!)
+  password: "YourPassword"
+  server: "Broker-Server"    # exact server name from the MT5 login dialog
+  path: "C:/Program Files/MetaTrader 5/terminal64.exe"
+
+bot_settings:
+  symbols: ["EURUSD", "GBPUSD", "XAUUSD"]
+  timeframe: "M15"           # M1, M5, M15, M30, H1, H4, D1
+  magic_number: 123456
+  poll_seconds: 30           # how often to poll for a newly-closed candle
+  deviation: 20              # max slippage in points for market orders
+  dry_run: true              # TRUE = log/notify signals only, send NO orders
+
+# Position sizing — risk is a % of account balance per trade.
+risk:
+  risk_percent: 1.0
+  max_open_trades: 3
+
+# Strategy parameters (all optional; these are the defaults).
+strategy:
+  ema_fast: 9
+  ema_slow: 21
+  ema_trend: 200             # trend filter — only trade with the dominant trend
+  rsi_period: 14
+  rsi_buy: 50.0              # RSI must be above this to go long
+  rsi_sell: 50.0            # RSI must be below this to go short
+  rsi_overbought: 75.0       # don't buy into exhaustion
+  rsi_oversold: 25.0         # don't sell into exhaustion
+  atr_period: 14
+  atr_sl_mult: 1.5           # stop-loss distance = 1.5 x ATR
+  risk_reward: 2.0           # take-profit = 2 x the stop distance
+
+telegram:
+  token: "your_bot_token"
+  chat_id: "your_chat_id"

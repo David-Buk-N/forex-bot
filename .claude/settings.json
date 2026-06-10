@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "Bash(python -c ' *)",
+      "Read(//c/Users/Admin/.claude/projects/c--Users-Admin-Desktop-Projects-Trading-bot-forex-bot/memory/**)",
+      "PowerShell(python --version)",
+      "PowerShell(python -c \"import sys; print\\(sys.executable\\)\")",
+      "PowerShell(python -c \"import MetaTrader5; print\\('MetaTrader5', MetaTrader5.__version__\\)\" 2>$null)",
+      "PowerShell(python -c \"import pandas; print\\('pandas', pandas.__version__\\)\" 2>$null)",
+      "PowerShell(python -c \"import yaml; print\\('pyyaml ok'\\)\" 2>$null)",
+      "PowerShell(python -c \"import requests; print\\('requests ok'\\)\" 2>$null)",
+      "PowerShell(python -m pip install \"MetaTrader5>=5.0\" 2>&1)",
+      "PowerShell(python -c \"import MetaTrader5 as mt5; print\\('MetaTrader5', mt5.__version__\\)\")",
+      "Bash(git rm *)",
+      "Bash(git check-ignore *)",
+      "PowerShell(Get-Process terminal64 -ErrorAction SilentlyContinue | Select-Object Id, MainWindowTitle, @{N='StartedAgoMin';E={[math]::Round\\(\\(\\(Get-Date\\) - $_.StartTime\\).TotalMinutes,1\\)}} | Format-Table -AutoSize)",
+      "PowerShell(Set-Location \"c:\\\\Users\\\\Admin\\\\Desktop\\\\Projects\\\\Trading bot\\\\forex-bot\\\\studio\"; $env:PYTHONIOENCODING=\"utf-8\"; python -u main.py)",
+      "PowerShell(Set-Location \"c:\\\\Users\\\\Admin\\\\Desktop\\\\Projects\\\\Trading bot\\\\forex-bot\\\\studio\"; $env:PYTHONIOENCODING=\"utf-8\"; python _demo_test_order.py)"
+    ]
+  }
+}
